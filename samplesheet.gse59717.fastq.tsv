@@ -1,0 +1,5 @@
+sample_id	condition	fastq_1	fastq_2	strandedness
+SRR1523658	MOCK	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523658/SRR1523658_1.fastq	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523658/SRR1523658_2.fastq	reverse
+SRR1523672	MOCK	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523672/SRR1523672_1.fastq	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523672/SRR1523672_2.fastq	reverse
+SRR1523666	HSV1	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523666/SRR1523666_1.fastq	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523666/SRR1523666_2.fastq	reverse
+SRR1523680	HSV1	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523680/SRR1523680_1.fastq	/rs01/projects/jadezhoulab/tud03125/GSE59717/fastq/SRR1523680/SRR1523680_2.fastq	reverse

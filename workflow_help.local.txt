@@ -1,0 +1,196 @@
+usage: dsRNASeeker workflow [-h] --output-dir OUTPUT_DIR --case-label
+                            CASE_LABEL --control-label CONTROL_LABEL
+                            --samplesheet SAMPLESHEET
+                            [--input-mode {fastq,bam}] --fasta FASTA --gtf GTF
+                            --te-gtf TE_GTF
+                            [--strandedness {auto,forward,reverse,unstranded,fr-firststrand,fr-secondstrand}]
+                            [--paired] [--single-end] --read-length
+                            READ_LENGTH [--threads THREADS] [--force]
+                            [--quiet] [--verbose] [--star-index STAR_INDEX]
+                            [--build-star-index]
+                            [--sjdb-overhang SJDB_OVERHANG]
+                            [--skip-te-analysis]
+                            [--te-feature-type TE_FEATURE_TYPE]
+                            [--te-attribute TE_ATTRIBUTE]
+                            [--te-padj-max TE_PADJ_MAX]
+                            [--te-lfc-min TE_LFC_MIN]
+                            [--featurecounts-exe FEATURECOUNTS_EXE]
+                            [--skip-rmats] [--rmats-exe RMATS_EXE]
+                            [--rmats-track {JC,JCEC}]
+                            [--rmats-fdr-max RMATS_FDR_MAX]
+                            [--rmats-cstat RMATS_CSTAT]
+                            [--rmats-libtype {None,fr-unstranded,fr-firststrand,fr-secondstrand}]
+                            [--rmats-novel-ss] [--no-rmats-novel-ss]
+                            [--skip-reditools] [--reditools-exe REDITOOLS_EXE]
+                            [--reditools-strand REDITOOLS_STRAND]
+                            [--reditools-extra REDITOOLS_EXTRA]
+                            [--reditools-post-rscript REDITOOLS_POST_RSCRIPT]
+                            [--reditools-min-meanq REDITOOLS_MIN_MEANQ]
+                            [--reditools-min-coverage REDITOOLS_MIN_COVERAGE]
+                            [--reditools-min-frequency REDITOOLS_MIN_FREQUENCY]
+                            [--run-sprint] [--sprint-exe SPRINT_EXE]
+                            [--sprint-repeat-bed SPRINT_REPEAT_BED]
+                            [--sprint-geta2i SPRINT_GETA2I]
+                            [--sprint-strand-specific {0,1}]
+                            [--bwa-exe BWA_EXE] [--sprint-extra SPRINT_EXTRA]
+                            [--precomputed-csv-in PRECOMPUTED_CSV_IN]
+                            [--precomputed-rmats-dir PRECOMPUTED_RMATS_DIR]
+                            [--precomputed-redit-dir PRECOMPUTED_REDIT_DIR]
+                            [--precomputed-sprint-dir PRECOMPUTED_SPRINT_DIR]
+                            [--analyze-subset {inverted,hairpin,allpairs}]
+                            [--window-w WINDOW_W] [--arm-aware]
+                            [--no-arm-aware] [--arm-pad ARM_PAD]
+                            [--arm-min-cov ARM_MIN_COV]
+                            [--min-selected-candidates MIN_SELECTED_CANDIDATES]
+                            [--do-ddg] [--no-ddg] [--do-pf-interface]
+                            [--do-null-z] [--null-n NULL_N]
+                            [--null-seed NULL_SEED] [--do-intarna]
+                            [--cofold-strong COFOLD_STRONG]
+                            [--cofold-moderate COFOLD_MODERATE]
+                            [--transcript-mapping-rscript TRANSCRIPT_MAPPING_RSCRIPT]
+                            [--priority-top-n PRIORITY_TOP_N]
+                            [--priority-mode {strict,relaxed}]
+                            [--no-require-case-editing] [--no-require-case-ri]
+                            [--priority-score-mode {expert,adaptive,supervised}]
+                            [--training-truth-table TRAINING_TRUTH_TABLE]
+                            [--training-labels TRAINING_LABELS]
+                            [--truth-symbol-col TRUTH_SYMBOL_COL]
+                            [--truth-label-mode {positive_logfc_padj,padj_only,all_table_rows,explicit_label_col}]
+                            [--truth-label-col TRUTH_LABEL_COL]
+                            [--truth-padj-col TRUTH_PADJ_COL]
+                            [--truth-logfc-col TRUTH_LOGFC_COL]
+                            [--truth-padj-max TRUTH_PADJ_MAX]
+                            [--supervised-test-size SUPERVISED_TEST_SIZE]
+                            [--cv-folds CV_FOLDS]
+                            [--supervised-random-state SUPERVISED_RANDOM_STATE]
+                            [--zrna-score-mode {pc1,sequence_pc1,consensus}]
+                            [--zrna-class-mode {quantile,fixed}]
+                            [--zrna-moderate-threshold ZRNA_MODERATE_THRESHOLD]
+                            [--zrna-high-threshold ZRNA_HIGH_THRESHOLD]
+                            [--star-exe STAR_EXE] [--python-exe PYTHON_EXE]
+                            [--rscript-exe RSCRIPT_EXE]
+                            [--bedtools-exe BEDTOOLS_EXE]
+                            [--samtools-exe SAMTOOLS_EXE]
+                            [--bamcoverage-exe BAMCOVERAGE_EXE]
+                            [--multibigwigsummary-exe MULTIBIGWIGSUMMARY_EXE]
+                            [--rnacofold-exe RNACOFOLD_EXE]
+                            [--rnafold-exe RNAFOLD_EXE]
+                            [--intarna-exe INTARNA_EXE]
+
+options:
+  -h, --help            show this help message and exit
+  --output-dir OUTPUT_DIR
+  --case-label CASE_LABEL
+  --control-label CONTROL_LABEL
+  --samplesheet SAMPLESHEET
+                        FASTQ TSV/CSV with sample_id, condition, fastq_1,
+                        fastq_2, strandedness; or BAM TSV with bam_path if
+                        --input-mode bam
+  --input-mode {fastq,bam}
+  --fasta FASTA
+  --gtf GTF
+  --te-gtf TE_GTF       RepeatMasker/RMSK TE GTF for TE counting
+  --strandedness {auto,forward,reverse,unstranded,fr-firststrand,fr-secondstrand}
+  --paired
+  --single-end
+  --read-length READ_LENGTH
+  --threads THREADS
+  --force               Re-run steps even when expected outputs already exist
+  --quiet               Redirect noisy tool stdout/stderr to
+                        pipeline_info/logs (default)
+  --verbose             Print internal STAR/rMATS/REDItools/SPRINT output to
+                        terminal
+  --star-index STAR_INDEX
+  --build-star-index
+  --sjdb-overhang SJDB_OVERHANG
+                        Default: read_length - 1
+  --skip-te-analysis    Skip TE analysis and reuse --precomputed-csv-in or
+                        existing internal TE CSV
+  --te-feature-type TE_FEATURE_TYPE
+  --te-attribute TE_ATTRIBUTE
+  --te-padj-max TE_PADJ_MAX
+  --te-lfc-min TE_LFC_MIN
+  --featurecounts-exe FEATURECOUNTS_EXE
+  --skip-rmats
+  --rmats-exe RMATS_EXE
+  --rmats-track {JC,JCEC}
+  --rmats-fdr-max RMATS_FDR_MAX
+  --rmats-cstat RMATS_CSTAT
+  --rmats-libtype {None,fr-unstranded,fr-firststrand,fr-secondstrand}
+  --rmats-novel-ss
+  --no-rmats-novel-ss
+  --skip-reditools
+  --reditools-exe REDITOOLS_EXE
+                        REDItools2 executable/script. Default assumes
+                        src/cineca/reditools.py-style arguments
+  --reditools-strand REDITOOLS_STRAND
+                        Value passed to REDItools2 -s; keep user-overridable
+                        because REDItools installs differ
+  --reditools-extra REDITOOLS_EXTRA
+                        Extra raw REDItools2 arguments, quoted as one string
+  --reditools-post-rscript REDITOOLS_POST_RSCRIPT
+                        Optional generic R postprocessor; default uses
+                        r/reditools_filter_a2i.R
+  --reditools-min-meanq REDITOOLS_MIN_MEANQ
+  --reditools-min-coverage REDITOOLS_MIN_COVERAGE
+  --reditools-min-frequency REDITOOLS_MIN_FREQUENCY
+  --run-sprint
+  --sprint-exe SPRINT_EXE
+  --sprint-repeat-bed SPRINT_REPEAT_BED
+                        RepeatMasker/repeat BED required by SPRINT -rp
+  --sprint-geta2i SPRINT_GETA2I
+                        Path to SPRINT/utilities/getA2I.py
+  --sprint-strand-specific {0,1}
+  --bwa-exe BWA_EXE
+  --sprint-extra SPRINT_EXTRA
+  --precomputed-csv-in PRECOMPUTED_CSV_IN
+  --precomputed-rmats-dir PRECOMPUTED_RMATS_DIR
+  --precomputed-redit-dir PRECOMPUTED_REDIT_DIR
+  --precomputed-sprint-dir PRECOMPUTED_SPRINT_DIR
+  --analyze-subset {inverted,hairpin,allpairs}
+  --window-w WINDOW_W
+  --arm-aware
+  --no-arm-aware
+  --arm-pad ARM_PAD
+  --arm-min-cov ARM_MIN_COV
+  --min-selected-candidates MIN_SELECTED_CANDIDATES
+  --do-ddg
+  --no-ddg
+  --do-pf-interface
+  --do-null-z
+  --null-n NULL_N
+  --null-seed NULL_SEED
+  --do-intarna
+  --cofold-strong COFOLD_STRONG
+  --cofold-moderate COFOLD_MODERATE
+  --transcript-mapping-rscript TRANSCRIPT_MAPPING_RSCRIPT
+  --priority-top-n PRIORITY_TOP_N
+  --priority-mode {strict,relaxed}
+  --no-require-case-editing
+  --no-require-case-ri
+  --priority-score-mode {expert,adaptive,supervised}
+  --training-truth-table TRAINING_TRUTH_TABLE
+  --training-labels TRAINING_LABELS
+  --truth-symbol-col TRUTH_SYMBOL_COL
+  --truth-label-mode {positive_logfc_padj,padj_only,all_table_rows,explicit_label_col}
+  --truth-label-col TRUTH_LABEL_COL
+  --truth-padj-col TRUTH_PADJ_COL
+  --truth-logfc-col TRUTH_LOGFC_COL
+  --truth-padj-max TRUTH_PADJ_MAX
+  --supervised-test-size SUPERVISED_TEST_SIZE
+  --cv-folds CV_FOLDS
+  --supervised-random-state SUPERVISED_RANDOM_STATE
+  --zrna-score-mode {pc1,sequence_pc1,consensus}
+  --zrna-class-mode {quantile,fixed}
+  --zrna-moderate-threshold ZRNA_MODERATE_THRESHOLD
+  --zrna-high-threshold ZRNA_HIGH_THRESHOLD
+  --star-exe STAR_EXE
+  --python-exe PYTHON_EXE
+  --rscript-exe RSCRIPT_EXE
+  --bedtools-exe BEDTOOLS_EXE
+  --samtools-exe SAMTOOLS_EXE
+  --bamcoverage-exe BAMCOVERAGE_EXE
+  --multibigwigsummary-exe MULTIBIGWIGSUMMARY_EXE
+  --rnacofold-exe RNACOFOLD_EXE
+  --rnafold-exe RNAFOLD_EXE
+  --intarna-exe INTARNA_EXE

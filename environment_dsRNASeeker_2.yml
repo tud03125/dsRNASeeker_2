@@ -1,0 +1,47 @@
+name: dsRNASeeker_2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.10,<3.12
+  - numpy
+  - pandas
+  - pyyaml
+  - scikit-learn
+  - bedtools
+  - samtools
+  - bwa
+  - deeptools
+  - star
+  - subread
+  - rmats
+  - rseqc
+  - viennarna
+  - intarna
+  - pysam
+  - scipy
+  - matplotlib
+  - pybigwig
+  - r-base>=4.3
+  - r-data.table
+  - bioconductor-deseq2
+  - bioconductor-genomicfeatures
+  - bioconductor-genomicranges
+  - bioconductor-iranges
+  - bioconductor-s4vectors
+  - bioconductor-txdbmaker
+  - bioconductor-rsubread
+  - bioconductor-atena
+  - bioconductor-chipseeker
+  - bioconductor-regioner
+  - bioconductor-txdb.hsapiens.ucsc.hg38.knowngene
+  - bioconductor-txdb.mmusculus.ucsc.mm39.knowngene
+  - bioconductor-txdb.mmusculus.ucsc.mm10.knowngene
+  - bioconductor-org.hs.eg.db
+  - bioconductor-org.mm.eg.db
+  - bioconductor-genomeinfodbdata
+  - r-ashr
+  - r-dplyr
+  - r-tibble
+  - pip

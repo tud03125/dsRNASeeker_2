@@ -1,0 +1,5 @@
+sample_id	condition	bam_path
+SRR1523658	MOCK	/rs01/projects/jadezhoulab/tud03125/GSE59717/star_manual/SRR1523658_Aligned.sortedByCoord.out.bam
+SRR1523672	MOCK	/rs01/projects/jadezhoulab/tud03125/GSE59717/star_manual/SRR1523672_Aligned.sortedByCoord.out.bam
+SRR1523666	HSV1	/rs01/projects/jadezhoulab/tud03125/GSE59717/star_manual/SRR1523666_Aligned.sortedByCoord.out.bam
+SRR1523680	HSV1	/rs01/projects/jadezhoulab/tud03125/GSE59717/star_manual/SRR1523680_Aligned.sortedByCoord.out.bam

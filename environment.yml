@@ -1,0 +1,24 @@
+name: dsRNASeeker
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.10,<3.12
+  - numpy
+  - pandas
+  - pyyaml
+  - bedtools
+  - samtools
+  - deeptools
+  - pysam
+  - pybigwig
+  - viennarna
+  - intarna
+  - r-base>=4.2
+  - bioconductor-genomicfeatures
+  - bioconductor-genomicranges
+  - bioconductor-iranges
+  - bioconductor-s4vectors
+  - bioconductor-txdbmaker
+  - r-data.table
+  - scikit-learn

@@ -1,0 +1,9 @@
+sample_id	condition	bam_path
+IA7	KETOGENIC	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA7.markdup.sorted.bam
+IA8	KETOGENIC	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA8.markdup.sorted.bam
+IA9	KETOGENIC	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA9.markdup.sorted.bam
+I1	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I1.markdup.sorted.bam
+I2	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I2.markdup.sorted.bam
+IA1	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA1.markdup.sorted.bam
+IA2	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA2.markdup.sorted.bam
+IA3	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA3.markdup.sorted.bam

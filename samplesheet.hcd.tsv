@@ -1,0 +1,11 @@
+sample_id	condition	bam_path
+I1	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I1.markdup.sorted.bam
+I2	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I2.markdup.sorted.bam
+IA1	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA1.markdup.sorted.bam
+IA2	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA2.markdup.sorted.bam
+IA3	FASTED	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA3.markdup.sorted.bam
+I3	HCD	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I3.markdup.sorted.bam
+I4	HCD	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/I4.markdup.sorted.bam
+IA4	HCD	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA4.markdup.sorted.bam
+IA5	HCD	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA5.markdup.sorted.bam
+IA6	HCD	/rs01/projects/jadezhoulab/tud03125/pipeline/mouse_liver_rnaseq_USCS/star_salmon/IA6.markdup.sorted.bam
