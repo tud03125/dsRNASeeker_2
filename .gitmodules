@@ -1,0 +1,6 @@
+[submodule "tools/REDItools2"]
+	path = tools/REDItools2
+	url = https://github.com/BioinfoUNIBA/REDItools2.git
+[submodule "tools/SPRINT"]
+	path = tools/SPRINT
+	url = https://github.com/jumphone/SPRINT.git
